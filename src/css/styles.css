@@ -61,3 +61,22 @@ body {
 .form .btn:hover {
     background: linear-gradient(90deg, rgba(148, 91, 233, 0.384), #da785a 80%);
 }
+
+.preview-area {
+    display: none;
+}
+
+.code-section {
+    border-radius: 25px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.code-section .code-preview {
+    margin-bottom: 40px;
+}
+
+.code-section .code-preview h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}

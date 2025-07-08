@@ -31,3 +31,33 @@ body {
     backdrop-filter: blur(6px);
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
+.form .label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.form .input {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #fff3;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.form .btn {
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(90deg, #a259ff, #f24e1e 100%);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form .btn:hover {
+    background: linear-gradient(90deg, rgba(148, 91, 233, 0.384), #da785a 80%);
+}

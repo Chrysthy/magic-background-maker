@@ -45,6 +45,7 @@ body {
     border: 1px solid #fff3;
     font-size: 20px;
     margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .form .btn {
@@ -56,6 +57,7 @@ body {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    padding: 15px;
 }
 
 .form .btn:hover {
@@ -79,4 +81,15 @@ body {
 .code-section .code-preview h2 {
     font-size: 20px;
     margin-bottom: 20px;
+}
+
+.code-section .code-preview .code {
+    background-color: #3c3c3c;
+    color: #22d3ee;
+    padding: 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: left;
+    overflow-x: auto;
+    height: 100px;
 }

@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const description = document.getElementById("description").value;
 
+        setLoading(true);
+
         try {
             const response = await fetch("", {
                 method: "POST",
@@ -26,13 +28,24 @@ document.addEventListener('DOMContentLoaded', () => {
             preview.style.display = "block";
             preview.innerHTML = data.code;
 
+            // Remove estilos antigos
+            let styleTag = document.getElementById("dynamic-style");
+
+            if(styleTag) styleTag.remove();
+
+            if(data.style) {
+                styleTag = document.createElement("style");
+                styleTag.id = "dynamic-style";
+                styleTag.textContent = data.style;
+                document.head.appendChild(styleTag);
+            }
 
 
         } catch (error) {
             console.error("Erro ao obter o valor do campo de texto:", error);
 
         } finally {
-
+            setLoading(false);
         }
     });
 

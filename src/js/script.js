@@ -7,6 +7,19 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
 
         const description = document.getElementById("description").value;
+
+        try {
+            const response = fetch("", 
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({description})            )
+            
+        } catch (error) {
+            console.error("Erro ao obter o valor do campo de texto:", error);
+            
+        } finally {
+
+        }
     });
 
     function setLoading(isLoading) {

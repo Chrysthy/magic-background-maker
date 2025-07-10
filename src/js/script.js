@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setLoading(true);
 
         try {
-            const response = await fetch("", {
+            const response = await fetch("http://localhost:5678/webhook-test/97c01389-bd86-47d9-aa7d-8724851acffe", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ description })
@@ -31,9 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Remove estilos antigos
             let styleTag = document.getElementById("dynamic-style");
 
-            if(styleTag) styleTag.remove();
+            if (styleTag) styleTag.remove();
 
-            if(data.style) {
+            if (data.style) {
                 styleTag = document.createElement("style");
                 styleTag.id = "dynamic-style";
                 styleTag.textContent = data.style;

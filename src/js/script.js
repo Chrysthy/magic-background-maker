@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setLoading(true);
 
         try {
-            const response = await fetch("http://localhost:5678/webhook-test/97c01389-bd86-47d9-aa7d-8724851acffe", {
+            const response = await fetch("http://localhost:5678/webhook/97c01389-bd86-47d9-aa7d-8724851acffe", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ description })

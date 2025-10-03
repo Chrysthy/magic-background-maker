@@ -6,55 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magic Background Maker</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
 
 </head>
 
 <body>
 
-    <main class="root">
+    <header class="header">
 
-        <section class="form-card">
+        <h1 class="title">Magic Background Maker 🪄</h1>
 
-            <h1 class="title">Magic Background Maker 🪄</h1>
+        <p class="subtitle">Transforme suas ideias em fundos incríveis!</p>
 
-            <form class="form">
+    </header>
 
-                <label class="label" for="description">Descreva o Background que você deseja:</label>
+    <main class="container">
 
-                <input type="text" class="input" id="description" placeholder="Ex.: Fundo com gradiente roxo">
+        <section class="card main-card">
 
-                <button class="btn">Gerar Background</button>
+            <h2 class="card-header">Descreva o Background que você deseja</h2>
+
+            <form class="form-group">
+
+                <textarea id="description"
+                    placeholder="Ex.: Fundo com gradiente roxo suave que vai para o roxo claro e para o roxo escuro"
+                    rows="5"></textarea>
+
+                <button id="generate-btn" class="btn-magic">
+
+                    <span id="btn-text">Gerar Background Mágico</span>
+
+                </button>
 
             </form>
 
         </section>
 
-        <section class="preview-area"></section>
+        <section id="preview-section" class="preview-card"></section>
 
-        <section class="code-section">
+        <section id="code-input" class="code-grid">
 
-            <div class="code-preview">
+            <div class="card code-card">
 
-                <h2>Código HTML Gerado</h2>
+                <h3 class="code-title">Código HTML Gerado</h3>
 
-                <pre class="code html-code">HTML gerado aparece aqui</pre>
+                <pre id="html-code" class="code-block">HTML gerado aparece aqui</pre>
 
             </div>
 
-            <div class="code-preview">
+            <div class="card code-card">
 
-                <h2>Código CSS Gerado</h2>
+                <h3 class="code-title">Código CSS Gerado</h3>
 
-                <pre class="code css-code">CSS gerado aparece aqui</pre>
+                <pre id="css-code" class="code-block">CSS gerado aparece aqui</pre>
 
             </div>
 
         </section>
 
     </main>
-
 
     <script src="src/js/script.js"></script>
 

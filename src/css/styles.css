@@ -90,6 +90,12 @@ body {
     transform: translateY(-2px);
 }
 
+.preview-card {
+    display: none;
+}
+
+
+
 .root .title {
     font-size: 40px;
     font-weight: bold;

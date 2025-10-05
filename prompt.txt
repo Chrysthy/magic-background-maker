@@ -84,3 +84,10 @@ se atente pra criar todas os elementos html que você definiu nas classes css e 
 não retorne nenhuma div ou estilo com loader, ou classe loader
 não retorne nenhuma propriedade com overflow
 `
+
+Código do nó Code no n8n
+
+// Loop over input items and add a new field called 'myNewField' to the JSON of each one
+const output = $input.first().json.output.replace("json","").replaceAll("`","");
+
+return {output};

@@ -3,9 +3,9 @@ function setLoading(isLoading) {
     const btnSpan = document.getElementById("generate-btn");
 
     if (isLoading) {
-        btnSpan.innerHTML = "Gerando Background...";
+        btnSpan.innerHTML = "Creating Background...";
     } else {
-        btnSpan.innerHTML = "Gerar Background Mágico";
+        btnSpan.innerHTML = "Generate Magic Background";
     }
 }
 

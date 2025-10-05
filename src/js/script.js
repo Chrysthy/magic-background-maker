@@ -1,34 +1,48 @@
-document.addEventListener('DOMContentLoaded', () => {
+function setLoading(isLoading) {
+    
+    const btnSpan = document.getElementById("generate-btn");
 
-    const form = document.querySelector('.form');
-    const btn = document.querySelector('.btn');
-    const htmlCode = document.querySelector('.html-code');
-    const cssCode = document.querySelector('.css-code');
-    const preview = document.querySelector('.preview-area')
+    if (isLoading) {
+        btnSpan.innerHTML = "Gerando Background...";
+    } else {
+        btnSpan.innerHTML = "Gerar Background Mágico";
+    }
+}
 
-    form.addEventListener("submit", async event => {
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.querySelector(".form-group");
+    const textArea = document.getElementById("description");
+    const htmlCode = document.getElementById("html-code");
+    const cssCode = document.getElementById("css-code");
+    const preview = document.getElementById("preview-section");
+
+    form.addEventListener("submit", async function (event) {
         event.preventDefault();
 
-        const description = document.getElementById("description").value;
+        const description = textArea.value.trim();
+
+        if (!description) {
+            return;
+        }
 
         setLoading(true);
 
         try {
-            const response = await fetch("http://localhost:5678/webhook/97c01389-bd86-47d9-aa7d-8724851acffe", {
+            const response = await fetch("https://chrysx.app.n8n.cloud/webhook/gerador-fundo", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ description })
+                body: JSON.stringify({ description }),
             });
 
             const data = await response.json();
 
-            htmlCode.textContent = data.code;
-            cssCode.textContent = data.style;
+            htmlCode.textContent = data.code || "";
+            cssCode.textContent = data.style || "";
 
             preview.style.display = "block";
-            preview.innerHTML = data.code;
+            preview.innerHTML = data.code || "";
 
-            // Remove estilos antigos
             let styleTag = document.getElementById("dynamic-style");
 
             if (styleTag) styleTag.remove();
@@ -36,25 +50,24 @@ document.addEventListener('DOMContentLoaded', () => {
             if (data.style) {
                 styleTag = document.createElement("style");
                 styleTag.id = "dynamic-style";
+
                 styleTag.textContent = data.style;
                 document.head.appendChild(styleTag);
             }
 
-
         } catch (error) {
-            console.error("Erro ao obter o valor do campo de texto:", error);
+            console.error("Erro ao gerar o fundo:", error);
+
+            htmlCode.textContent = "Não consegui gerar o código HTML, tente novamente";
+
+            cssCode.textContent = "Não consegui gerar o código CSS, tente novamente";
+
+            preview.innerHTML = "";
 
         } finally {
             setLoading(false);
         }
+
     });
-
-    function setLoading(isLoading) {
-
-        btn.innerHTML = isLoading ? "Gerando Background..." : "Gerar Background";
-
-    }
-
-
 
 });

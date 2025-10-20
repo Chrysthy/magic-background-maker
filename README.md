@@ -35,3 +35,9 @@
 - Git and GitHub
 
 <br>
+
+## ✨ Features
+
+* Create unique backgrounds in a few seconds.
+
+<br>

@@ -42,3 +42,35 @@
 * Create unique backgrounds in a few seconds.
 
 <br>
+
+## ⚙ How to Run
+
+### 📋 Requirements
+
+- Web browser ([Chrome](https://www.google.com/chrome/), [Edge](https://www.microsoft.com/edge), [Firefox](https://www.mozilla.org/firefox/), etc)  
+- [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) (optional but recommended)
+
+### 👣 Steps
+
+1. Clone the repository:
+
+   ```bash
+      git clone https://github.com/Chrysthy/magic-background-maker.git
+       cd magic background maker
+   ```
+
+2. Open the project in your code editor.
+
+3. Open the index.html file using the Live Server extension to run locally.
+
+4. The website will be available in your browser and ready to use.
+
+**API Configuration**
+
+This project fetches data via an ([n8n webhook](https://n8n.io/)), which integrates:  
+
+- [Gemini API](https://platform.openai.com/docs/models/gemini) (for language processing)  
+
+💡 Replace the webhook URL with your own n8n endpoint.
+
+<br>

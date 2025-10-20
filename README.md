@@ -31,7 +31,8 @@
 - HTML5  
 - CSS3  
 - JavaScript (Vanilla)
-- N8N
+- N8N (automation workflows)
+- Gemini AI (intelligent suggestions)
 - Git and GitHub
 
 <br>

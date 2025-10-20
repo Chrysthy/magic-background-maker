@@ -56,7 +56,7 @@
 
    ```bash
       git clone https://github.com/Chrysthy/magic-background-maker.git
-       cd magic background maker
+       cd magic-background-maker
    ```
 
 2. Open the project in your code editor.
@@ -72,5 +72,11 @@ This project fetches data via an ([n8n webhook](https://n8n.io/)), which integra
 - [Gemini API](https://platform.openai.com/docs/models/gemini) (for language processing)  
 
 💡 Replace the webhook URL with your own n8n endpoint.
+
+<br>
+
+## 📜 License
+
+* This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
 
 <br>

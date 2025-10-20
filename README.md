@@ -80,3 +80,8 @@ This project fetches data via an ([n8n webhook](https://n8n.io/)), which integra
 * This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
 
 <br>
+
+## 🫱🏻‍🫲🏻 Contributing
+<p> Contributions, issues, and feature requests are welcome! Please, feel free to do it! 😉 </p>
+
+<br>
